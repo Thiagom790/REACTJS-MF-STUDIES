@@ -1,0 +1,13 @@
+{
+  "name": "ra-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:consumer": "yarn workspace ra-consumer dev",
+    "start:producer": "yarn workspace ra-producer dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.1.0"
+}
