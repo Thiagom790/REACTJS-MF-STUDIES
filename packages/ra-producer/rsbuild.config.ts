@@ -11,6 +11,10 @@ export default defineConfig({
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
+      if (config.output) {
+        config.output.uniqueName = "ra_producer"; // required to react-hot-loader works in consumer app
+      }
+
       appendPlugins([
         new ModuleFederationPlugin({
           name: "ra_producer",
